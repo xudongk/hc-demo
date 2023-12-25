@@ -10,7 +10,7 @@ on:
         required: true
         default: 'SIT'
         type: choice
-        options: SIT, UAT, PROD
+        options: ['SIT', 'UAT']
       Deploy/Fallback:
         options: ['DP', 'FB']
     secrets:
