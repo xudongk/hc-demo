@@ -12,7 +12,7 @@ on:
 jobs:
   getCode:
     name: clone
-    uses: testMybatis/.github/workflows/Testenv2.yml@main
+    uses: xudongk/testMybatis/.github/workflows/Testenv2.yml@main
     with:
       json: 11
   deploy:
