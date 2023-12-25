@@ -6,8 +6,10 @@ name: cms_deploy
 on:
   workflow_dispatch:
     inputs:
-      json:
-        type: string
+      Env:
+        options: ['SIT', 'UAT', 'PROD']
+      Deploy/Fallback:
+        options: ['DP', 'FB']
     secrets:
       CMS_MYSQL_DRIVER:
         required: true
