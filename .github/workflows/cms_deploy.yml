@@ -15,9 +15,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          repository: xudongk/testMybatis
-          token: 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
   getCode:
     needs: [deploy]
     uses: xudongk/testMybatis/.github/workflows/Testenv2.yml@main
