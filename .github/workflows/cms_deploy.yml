@@ -18,19 +18,14 @@ jobs:
         with:
           repository: xudongk/testMybatis
       - name: deploy
-        uses: actions/checkout@v4
+        uses: xudongk/testMybatis/.github/actions/migation@main
         with:
-          repository: xudongk/testMybatis
-  getCode:
-    needs: [deploy]
-    uses: xudongk/testMybatis/.github/actions/migation@main
-    with:
-      json: 11
-    secrets:
-      CMS_MYSQL_DRIVER: ${{ secrets.CMS_MYSQL_DRIVER}}
-      CMS_MYSQL_PASSWORD: ${{ secrets.CMS_MYSQL_PASSWORD}}
-      CMS_MYSQL_URL: ${{ secrets.CMS_MYSQL_URL}}
-      CMS_MYSQL_USERNAME: ${{ secrets.CMS_MYSQL_USERNAME}}
+          json: 11
+        secrets:
+          CMS_MYSQL_DRIVER: ${{ secrets.CMS_MYSQL_DRIVER}}
+          CMS_MYSQL_PASSWORD: ${{ secrets.CMS_MYSQL_PASSWORD}}
+          CMS_MYSQL_URL: ${{ secrets.CMS_MYSQL_URL}}
+          CMS_MYSQL_USERNAME: ${{ secrets.CMS_MYSQL_USERNAME}}
   
       
       
