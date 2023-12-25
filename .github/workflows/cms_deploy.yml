@@ -13,11 +13,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: excute
+        uses: xudongk/testMybatis/.github/workflows/Testenv2.yml@main
+        with:
+          json: 11
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           repository: xudongk/testMybatis
           token: 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
+      
       
 
 
