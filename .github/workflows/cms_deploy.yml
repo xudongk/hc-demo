@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       Env:
+        default: 'SIT'
         options: ['SIT', 'UAT', 'PROD']
       Deploy/Fallback:
         options: ['DP', 'FB']
