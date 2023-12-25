@@ -10,8 +10,16 @@ on:
         type: string
 
 jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          repository: xudongk/testMybatis
+          token: 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
   getCode:
-    name: clone
+    needs: [deploy]
     uses: xudongk/testMybatis/.github/workflows/Testenv2.yml@main
     with:
       json: 11
@@ -20,14 +28,7 @@ jobs:
       CMS_MYSQL_PASSWORD: ${{ secrets.CMS_MYSQL_PASSWORD}}
       CMS_MYSQL_URL: ${{ secrets.CMS_MYSQL_URL}}
       CMS_MYSQL_USERNAME: ${{ secrets.CMS_MYSQL_USERNAME}}
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          repository: xudongk/testMybatis
-          token: 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
+  
       
       
 
