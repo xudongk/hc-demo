@@ -22,6 +22,6 @@ jobs:
         run: |
           ls
       - name: excute
-        uses: xudongk/testMybatis/.github/workflows/testMybatis.yml@main
+        uses: xudongk/testMybatis/.github/workflows/Testenv2.yml@main
 
 
