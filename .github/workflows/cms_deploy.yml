@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: cms_deploy
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+    inputs:
+      json:
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          repository: xudongk/testMybatis
+          token: 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
+      - id: getCode
+        run: |
+          ls
+      - name: excute
+        uses: testMybatis/.github/workflows/testMybatis.yml@main
+
+
