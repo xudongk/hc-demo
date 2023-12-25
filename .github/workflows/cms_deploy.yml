@@ -11,12 +11,10 @@ on:
 
 jobs:
   getCode:
-    runs-on: ubuntu-latest
-    steps:
-      - name: clone
-        uses: xudongk/testMybatis/.github/workflows/Testenv2.yml@main
-        with:
-          json: 11
+    name: clone
+    uses: xudongk/testMybatis/.github/workflows/Testenv2.yml@main
+    with:
+      json: 11
   deploy:
     runs-on: ubuntu-latest
     steps:
