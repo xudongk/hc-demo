@@ -7,8 +7,10 @@ on:
   workflow_dispatch:
     inputs:
       Env:
+        required: true
         default: 'SIT'
-        options: ['SIT', 'UAT', 'PROD']
+        type: choice
+        options: SIT, UAT, PROD
       Deploy/Fallback:
         options: ['DP', 'FB']
     secrets:
