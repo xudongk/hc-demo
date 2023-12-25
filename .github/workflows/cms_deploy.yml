@@ -18,10 +18,9 @@ jobs:
         with:
           repository: xudongk/testMybatis
           token: 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
-      - id: getCode
-        run: |
-          ls
       - name: excute
         uses: xudongk/testMybatis/.github/workflows/Testenv2.yml@main
+        with:
+          json: 11
 
 
