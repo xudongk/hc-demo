@@ -12,6 +12,7 @@ on:
         type: choice
         options: ['SIT', 'UAT']
       Deploy/Fallback:
+        type: choice
         options: ['DP', 'FB']
     secrets:
       CMS_MYSQL_DRIVER:
