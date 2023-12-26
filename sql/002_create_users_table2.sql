@@ -14,4 +14,4 @@ INSERT INTO test2 (id, name, age, email) VALUES(1, '1', 0, '2');
 -- SQL to undo the change goes here.
 
 
-update test2 set name='ssss' where id=1
+Drop table test2
