@@ -36,8 +36,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy
-        uses: xudongk/testMybatis/.github/actions/migation@main
+      - name: Deploy SIT
+        if: ${{ inputs.Env == 'SIT' }}
+        uses: xudongk/testMybatis/.github/actions/test@main
         with:
           Env: ${{ inputs.Env }}
           DeployType: ${{ inputs.DeployOrFallback }}
@@ -45,3 +46,13 @@ jobs:
           PASSWORD: ${{ secrets.SIT_MYSQL_PASSWORD }}
           URL: ${{ secrets.SIT_MYSQL_URL }}
           USERNAME: ${{ secrets.SIT_MYSQL_USERNAME }}
+      - name: Deploy UAT
+        if: ${{ inputs.Env == 'UAT' }}
+        uses: xudongk/testMybatis/.github/actions/test@main
+        with:
+          Env: ${{ inputs.Env }}
+          DeployType: ${{ inputs.DeployOrFallback }}
+          DRIVER: ${{ secrets.UAT_MYSQL_DRIVER }}
+          PASSWORD: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          URL: ${{ secrets.UAT_MYSQL_URL }}
+          USERNAME: ${{ secrets.UAT_MYSQL_USERNAME }}
