@@ -15,13 +15,21 @@ on:
         type: choice
         options: ['DP', 'FB']
     secrets:
-      CMS_MYSQL_DRIVER:
+      SIT_MYSQL_DRIVER:
         required: true
-      CMS_MYSQL_PASSWORD:
+      SIT_MYSQL_PASSWORD:
         required: true
-      CMS_MYSQL_URL:
+      SIT_MYSQL_URL:
         required: true
-      CMS_MYSQL_USERNAME:
+      SIT_MYSQL_USERNAME:
+        required: true
+      UAT_MYSQL_DRIVER:
+        required: true
+      UAT_MYSQL_PASSWORD:
+        required: true
+      UAT_MYSQL_URL:
+        required: true
+      UAT_MYSQL_USERNAME:
         required: true
 
 jobs:
@@ -33,7 +41,11 @@ jobs:
         with:
           Env: ${{ inputs.Env }}
           DeployType: ${{ inputs.DeployOrFallback }}
-          CMS_MYSQL_DRIVER: ${{ secrets.CMS_MYSQL_DRIVER}}
-          CMS_MYSQL_PASSWORD: ${{ secrets.CMS_MYSQL_PASSWORD}}
-          CMS_MYSQL_URL: ${{ secrets.CMS_MYSQL_URL}}
-          CMS_MYSQL_USERNAME: ${{ secrets.CMS_MYSQL_USERNAME}}
+          SIT_MYSQL_DRIVER: ${{ secrets.SIT_MYSQL_DRIVER}}
+          SIT_MYSQL_PASSWORD: ${{ secrets.SIT_MYSQL_PASSWORD}}
+          SIT_MYSQL_URL: ${{ secrets.SIT_MYSQL_URL}}
+          SIT_MYSQL_USERNAME: ${{ secrets.SIT_MYSQL_USERNAME}}
+          UAT_MYSQL_DRIVER: ${{ secrets.UAT_MYSQL_DRIVER}}
+          UAT_MYSQL_PASSWORD: ${{ secrets.UAT_MYSQL_PASSWORD}}
+          UAT_MYSQL_URL: ${{ secrets.UAT_MYSQL_URL}}
+          UAT_MYSQL_USERNAME: ${{ secrets.UAT_MYSQL_USERNAME}}
