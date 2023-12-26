@@ -41,11 +41,7 @@ jobs:
         with:
           Env: ${{ inputs.Env }}
           DeployType: ${{ inputs.DeployOrFallback }}
-          SIT_MYSQL_DRIVER: ${{ secrets.SIT_MYSQL_DRIVER}}
-          SIT_MYSQL_PASSWORD: ${{ secrets.SIT_MYSQL_PASSWORD}}
-          SIT_MYSQL_URL: ${{ secrets.SIT_MYSQL_URL}}
-          SIT_MYSQL_USERNAME: ${{ secrets.SIT_MYSQL_USERNAME}}
-          UAT_MYSQL_DRIVER: ${{ secrets.UAT_MYSQL_DRIVER}}
-          UAT_MYSQL_PASSWORD: ${{ secrets.UAT_MYSQL_PASSWORD}}
-          UAT_MYSQL_URL: ${{ secrets.UAT_MYSQL_URL}}
-          UAT_MYSQL_USERNAME: ${{ secrets.UAT_MYSQL_USERNAME}}
+          DRIVER: ${{ secrets.SIT_MYSQL_DRIVER }}
+          PASSWORD: ${{ secrets.SIT_MYSQL_PASSWORD }}
+          URL: ${{ secrets.SIT_MYSQL_URL }}
+          USERNAME: ${{ secrets.SIT_MYSQL_USERNAME }}
