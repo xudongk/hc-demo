@@ -28,10 +28,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          repository: xudongk/testMybatis
       - name: deploy
         uses: xudongk/testMybatis/.github/actions/test@main
         with:
