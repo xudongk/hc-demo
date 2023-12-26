@@ -11,7 +11,7 @@ on:
         default: 'SIT'
         type: choice
         options: ['SIT', 'UAT']
-      Deploy/Fallback:
+      Deploy:
         type: choice
         options: ['DP', 'FB']
     secrets:
@@ -28,6 +28,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository1
+        run: |
+          echo "Deploy: ${{ inputs.Deploy }}"
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
