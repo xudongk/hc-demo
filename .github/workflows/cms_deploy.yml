@@ -38,7 +38,7 @@ jobs:
     steps:
       - name: Deploy SIT
         if: ${{ inputs.Env == 'SIT' }}
-        uses: xudongk/testMybatis/.github/actions/test@main
+        uses: xudongk/testMybatis/.github/actions/migation@main
         with:
           Env: ${{ inputs.Env }}
           DeployType: ${{ inputs.DeployOrFallback }}
@@ -48,7 +48,7 @@ jobs:
           USERNAME: ${{ secrets.SIT_MYSQL_USERNAME }}
       - name: Deploy UAT
         if: ${{ inputs.Env == 'UAT' }}
-        uses: xudongk/testMybatis/.github/actions/test@main
+        uses: xudongk/testMybatis/.github/actions/migation@main
         with:
           Env: ${{ inputs.Env }}
           DeployType: ${{ inputs.DeployOrFallback }}
