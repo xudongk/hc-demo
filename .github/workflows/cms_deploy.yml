@@ -28,9 +28,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository1
-        run: |
-          echo "Deploy: ${{ inputs.DeployOrFallback }}"
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
