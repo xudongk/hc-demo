@@ -33,7 +33,7 @@ jobs:
         with:
           repository: xudongk/testMybatis
       - name: deploy
-        uses: xudongk/testMybatis/.github/actions/migation@main
+        uses: xudongk/testMybatis/.github/actions/test@main
         with:
           Env: ${{ inputs.Env }}
           DeployType: ${{ inputs.DeployOrFallback }}
