@@ -11,7 +11,7 @@ on:
         default: 'SIT'
         type: choice
         options: ['SIT', 'UAT']
-      Deploy/Fallback:
+      DeployOrFallback:
         type: choice
         options: ['DP', 'FB']
     secrets:
@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: Checkout repository1
         run: |
-          echo "Deploy: ${{ inputs.Deploy/Fallback }}"
+          echo "Deploy: ${{ inputs.DeployOrFallback }}"
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -39,7 +39,7 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/migation@main
         with:
           Env: ${{ inputs.Env }}
-          DeployType: ${{ inputs.Deploy/Fallback }}
+          DeployType: ${{ inputs.DeployOrFallback }}
           CMS_MYSQL_DRIVER: ${{ secrets.CMS_MYSQL_DRIVER}}
           CMS_MYSQL_PASSWORD: ${{ secrets.CMS_MYSQL_PASSWORD}}
           CMS_MYSQL_URL: ${{ secrets.CMS_MYSQL_URL}}
