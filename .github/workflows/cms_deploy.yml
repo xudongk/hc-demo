@@ -10,7 +10,7 @@ on:
         required: true
         default: 'SIT'
         type: choice
-        options: ['SIT', 'UAT']
+        options: ['SIT', 'UAT', 'PROD']
       DeployOrFallback:
         type: choice
         options: ['DP', 'FB']
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: deploy
-        uses: xudongk/testMybatis/.github/actions/test@main
+        uses: xudongk/testMybatis/.github/actions/migation@main
         with:
           Env: ${{ inputs.Env }}
           DeployType: ${{ inputs.DeployOrFallback }}
@@ -37,8 +37,3 @@ jobs:
           CMS_MYSQL_PASSWORD: ${{ secrets.CMS_MYSQL_PASSWORD}}
           CMS_MYSQL_URL: ${{ secrets.CMS_MYSQL_URL}}
           CMS_MYSQL_USERNAME: ${{ secrets.CMS_MYSQL_USERNAME}}
-  
-      
-      
-
-
