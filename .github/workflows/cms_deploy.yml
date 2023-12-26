@@ -42,6 +42,6 @@ jobs:
           Env: ${{ inputs.Env }}
           DeployType: ${{ inputs.DeployOrFallback }}
           DRIVER: ${{ secrets.SIT_MYSQL_DRIVER }}
-          PASSWORD: ${{ secrets.sa }}
+          PASSWORD: ${{ secrets.SIT_MYSQL_URL }}
           URL: ${{ secrets.SIT_MYSQL_URL }}
           USERNAME: ${{ secrets.SIT_MYSQL_USERNAME }}
