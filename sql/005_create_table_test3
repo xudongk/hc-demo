@@ -1,4 +1,4 @@
--- // create users table
+-- // create users table3
 -- Migration SQL that makes the change goes here.
 CREATE TABLE `test3` (
   `id` int NOT NULL,
