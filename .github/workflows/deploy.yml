@@ -2,6 +2,15 @@ name: Deploy
 
 on:
   workflow_dispatch:
+  secrets:
+    MYSQL_HOST:
+      required: true
+    MYSQL_PORT:
+      required: true
+    MYSQL_USER:
+      required: true
+    MYSQL_PASSWORD:
+      required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
