@@ -1,9 +1,16 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      Env:
+        required: true
+        default: 'SIT'
+        type: choice
+        options: ['SIT', 'UAT', 'PROD']
+      DeployOrFallback:
+        type: choice
+        options: ['DP', 'FB']
 jobs:
   build:
     runs-on: ha-linux
