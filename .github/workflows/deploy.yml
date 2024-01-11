@@ -2,17 +2,26 @@ name: Deploy
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Build"]
-    types:
-      - completed
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy
-        run: |
-          echo "Deploying code"
-          echo "Build result: ${{ needs.build.outputs.build_result }}"
+    - name: Set up MySQL
+      uses: mysql/setup-mysql@v2
+      with:
+        mysql-version: '8.0'
+        mysql-host: ${{ secrets.MYSQL_HOST }}
+        mysql-port: ${{ secrets.MYSQL_PORT }}
+        mysql-user: ${{ secrets.MYSQL_USER }}
+        mysql-password: ${{ secrets.MYSQL_PASSWORD }}
+    - name: Run MySQL script
+      run: 
+        ls
+        cd sql
+        echo "START TRANSACTION;" > new_test.sql
+        cat test.sql >> new_test.sql
+        echo "COMMIT;" >> new_test.sql
+        cat new_test.sql
+        # 运行 SQL 脚本或执行 MySQL 命令a
+        mysql -h 175.27.254.42 -P 3306 -u root -pPpe7LDR6FBWpL4Me -D fc < new_test.sql
