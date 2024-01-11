@@ -13,7 +13,7 @@ on:
         options: ['DP', 'FB']
 jobs:
   build:
-    runs-on: ha-linux
+    runs-on: [ha-linux]
     steps:
       - name: Build
         run: |
