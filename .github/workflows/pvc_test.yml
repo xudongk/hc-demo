@@ -3,6 +3,8 @@ name: pvc test
 on:
   workflow_dispatch:
     inputs:
+      pod_name:
+        type: string
       auth_file:
         required: true
         default: 'SIT'
@@ -11,12 +13,12 @@ on:
       pvc_path:
         type: string
 jobs:
-  copyfile:
+  pvc:
     runs-on: [ha-linux]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Build
+      - name: copy file
         run: |
           cd file
           kubectl cp 1.txt my-pvc-pod-798df58966-dtghl:/
