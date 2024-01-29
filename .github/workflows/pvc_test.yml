@@ -11,11 +11,12 @@ on:
       pvc_path:
         type: string
 jobs:
-  build:
+  copyfile:
     runs-on: [ha-linux]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build
         run: |
-          ls
+          cd file
+          kubectl cp 1.txt my-pvc-pod-798df58966-dtghl:/
