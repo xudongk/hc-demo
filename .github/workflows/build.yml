@@ -3,19 +3,19 @@ name: Build
 on:
   workflow_dispatch:
     inputs:
-      Env:
+      auth_file:
         required: true
         default: 'SIT'
         type: choice
         options: ['SIT', 'UAT', 'PROD']
-      DeployOrFallback:
-        type: choice
-        options: ['DP', 'FB']
+      pvc_path:
+        type: string
 jobs:
   build:
     runs-on: [ha-linux]
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Build
         run: |
-          echo "Building code"
-          echo "::set-output name=build_result::success"
+          ls
