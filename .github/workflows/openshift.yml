@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+
+name: open shift test
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ha-linux
+    steps:
+      - name: install cli
+        uses: redhat-actions/oc-installer@v1
+      - name: login
+        run: |
+          oc login --token=sha256~oQG3vrrbqh46JNjUJAXYfpngBRLztaKL-MJHOWlLvTs --server=https://api.sandbox-m2.ll9k.p1.openshiftapps.com:6443
