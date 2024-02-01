@@ -25,4 +25,4 @@ jobs:
           ls
       - name: upload file
         run: |
-          oc rsync file/ workspacea32e383af17946af-8f7695bdb-t7w65:/home
+          oc rsync file/ example:/home
