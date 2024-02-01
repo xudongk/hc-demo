@@ -25,4 +25,4 @@ jobs:
           ls
       - name: upload file
         run: |
-          oc rsync file/ example:/home
+          oc cp file/ example:/home
