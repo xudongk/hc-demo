@@ -15,3 +15,6 @@ jobs:
       - name: login
         run: |
           oc login --token=sha256~oQG3vrrbqh46JNjUJAXYfpngBRLztaKL-MJHOWlLvTs --server=https://api.sandbox-m2.ll9k.p1.openshiftapps.com:6443
+      - name: upload files
+        run: |
+          oc get pods
