@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ha-linux
+    runs-on: ubuntu-latest
     steps:
       - name: install cli
         uses: redhat-actions/oc-installer@v1
