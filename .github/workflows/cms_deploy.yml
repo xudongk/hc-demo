@@ -34,7 +34,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ha-win
     steps:
       - name: Deploy SIT
         if: ${{ inputs.Env == 'SIT' }}
