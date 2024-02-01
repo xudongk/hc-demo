@@ -25,4 +25,4 @@ jobs:
           ls
       - name: upload file
         run: |
-          oc cp file/ example:/opt/app-root/src
+          oc rsync file/ example:/opt/app-root/src
