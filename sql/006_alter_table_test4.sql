@@ -11,8 +11,8 @@ INSERT INTO test4 (id, name, age, email) VALUES(1, '1', 0, '2');
 -- //@UNDO
 -- SQL to undo the change goes here.
 ALTER TABLE `test4` (
-  DROP COLUMN telephone
-  ADD COLUMN age int DEFAULT NULL
+  DROP COLUMN 'telephone'
+  ADD COLUMN 'age' int DEFAULT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
