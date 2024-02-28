@@ -13,4 +13,4 @@ CREATE TABLE `test3` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO test3 (id, name, age, email_test) VALUES(1, '1', 0, '2@qq.com');
+INSERT INTO test3 (id, name, age, email) VALUES(1, '1', 0, '2@qq.com');
