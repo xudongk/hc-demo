@@ -15,9 +15,9 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'UPLOAD'
-          server: ${{ secrets.ACT_URL }}
-          user: ${{ secrets.ACT_USER }}
-          password: ${{ secrets.ACT_PASSWORD }}
+          server: '117.88.100.240'
+          user: 'ftp'
+          password: 'ftp@123'
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'build'
   test:
@@ -28,9 +28,9 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'DOWNLOAD'
-          server: ${{ secrets.ACT_URL }}
-          user: ${{ secrets.ACT_USER }}
-          password: ${{ secrets.ACT_PASSWORD }}
+          server: '117.88.100.240'
+          user: 'ftp'
+          password: 'ftp@123'
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'build'
       - name: test
@@ -42,9 +42,9 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'UPLOAD'
-          server: ${{ secrets.ACT_URL }}
-          user: ${{ secrets.ACT_USER }}
-          password: ${{ secrets.ACT_PASSWORD }}
+          server: '117.88.100.240'
+          user: 'ftp'
+          password: 'ftp@123'
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'test'
   scan-code:
@@ -55,9 +55,9 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'DOWNLOAD'
-          server: ${{ secrets.ACT_URL }}
-          user: ${{ secrets.ACT_USER }}
-          password: ${{ secrets.ACT_PASSWORD }}
+          server: '117.88.100.240'
+          user: 'ftp'
+          password: 'ftp@123'
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'test'
       - name: scan
