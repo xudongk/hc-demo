@@ -19,7 +19,7 @@ jobs:
           server: ${{ inputs.DeployOrFallback }}
           user: ${{ secrets.UAT_MYSQL_DRIVER }}
           password: ${{ secrets.UAT_MYSQL_PASSWORD }}
-          remotDir: ${{ secrets.UAT_MYSQL_URL }}
+          remotDir: xudongk_hc-demo_test_file_share
           stepName: 'build'
   test:
     runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
           server: ${{ inputs.DeployOrFallback }}
           user: ${{ secrets.UAT_MYSQL_DRIVER }}
           password: ${{ secrets.UAT_MYSQL_PASSWORD }}
-          remotDir: ${{ secrets.UAT_MYSQL_URL }}
+          remotDir: xudongk_hc-demo_test_file_share
           stepName: 'build'
       - name: test
         run: |
@@ -43,7 +43,7 @@ jobs:
           server: ${{ inputs.DeployOrFallback }}
           user: ${{ secrets.UAT_MYSQL_DRIVER }}
           password: ${{ secrets.UAT_MYSQL_PASSWORD }}
-          remotDir: ${{ secrets.UAT_MYSQL_URL }}
+          remotDir: xudongk_hc-demo_test_file_share
           stepName: 'test'
   scan-code:
     runs-on: ubuntu-latest
@@ -55,7 +55,7 @@ jobs:
           server: ${{ inputs.DeployOrFallback }}
           user: ${{ secrets.UAT_MYSQL_DRIVER }}
           password: ${{ secrets.UAT_MYSQL_PASSWORD }}
-          remotDir: ${{ secrets.UAT_MYSQL_URL }}
+          remotDir: xudongk_hc-demo_test_file_share
           stepName: 'test'
       - name: scan
         run: |
