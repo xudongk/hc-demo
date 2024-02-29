@@ -1,0 +1,78 @@
+name: ddl_deploy
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Deploy
+        runs: |
+          echo deploy
+      - name: upload
+        if: ${{ inputs.Env == 'UAT' }}
+        uses: xudongk/testMybatis/.github/actions/ftp@main
+        with:
+          type: 'UPLOAD'
+          server: ${{ inputs.DeployOrFallback }}
+          user: ${{ secrets.UAT_MYSQL_DRIVER }}
+          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          remotDir: ${{ secrets.UAT_MYSQL_URL }}
+          stepName: 'build'
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download
+        uses: xudongk/testMybatis/.github/actions/ftp@main
+        with:
+          type: 'DOWNLOAD'
+          server: ${{ inputs.DeployOrFallback }}
+          user: ${{ secrets.UAT_MYSQL_DRIVER }}
+          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          remotDir: ${{ secrets.UAT_MYSQL_URL }}
+          stepName: 'build'
+      - name：test
+        runs: |
+          echo deploy
+      - name: upload
+        uses: xudongk/testMybatis/.github/actions/ftp@main
+        with:
+          type: 'DOWNLOAD'
+          server: ${{ inputs.DeployOrFallback }}
+          user: ${{ secrets.UAT_MYSQL_DRIVER }}
+          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          remotDir: ${{ secrets.UAT_MYSQL_URL }}
+          stepName: 'test'
+  scan-code：
+    runs-on: ubuntu-latest
+    steps:
+      - name: download
+        uses: xudongk/testMybatis/.github/actions/ftp@main
+        with:
+          type: 'DOWNLOAD'
+          server: ${{ inputs.DeployOrFallback }}
+          user: ${{ secrets.UAT_MYSQL_DRIVER }}
+          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          remotDir: ${{ secrets.UAT_MYSQL_URL }}
+          stepName: 'test'
+      - name：
+        runs：|
+          ls
+  clean：
+    runs-on: ubuntu-latest
+    steps:
+      - name: delete
+        uses: xudongk/testMybatis/.github/actions/ftp@main
+        with:
+          type: 'DELETE'
+          server: ${{ inputs.DeployOrFallback }}
+          user: ${{ secrets.UAT_MYSQL_DRIVER }}
+          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          remotDir: xudongk_hc-demo_test_file_share
+          stepName: 'delete'
+        
+    
+        
