@@ -35,6 +35,7 @@ jobs:
           stepName: 'build'
       - name: test
         run: |
+          cd file
           mkdir a
           echo test workspace
           ls
@@ -63,6 +64,7 @@ jobs:
       - name: scan
         run: |
           echo scan-code workspace
+          cd file
           ls
   clean:
     needs: [scan-code]
