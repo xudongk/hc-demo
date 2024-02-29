@@ -22,6 +22,7 @@ jobs:
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'build'
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: download
@@ -48,6 +49,7 @@ jobs:
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'test'
   scan-code:
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: download
@@ -64,6 +66,7 @@ jobs:
           echo scan-code workspace
           ls
   clean:
+    needs: [scan-code]
     runs-on: ubuntu-latest
     steps:
       - name: delete
