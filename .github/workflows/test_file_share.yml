@@ -1,4 +1,4 @@
-name: ddl_deploy
+name: test file share
 
 on:
   workflow_dispatch:
