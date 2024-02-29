@@ -1,6 +1,5 @@
 name: ddl_deploy
 
-# Controls when the workflow will run
 on:
   workflow_dispatch:
 jobs:
@@ -10,7 +9,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Deploy
-        runs: |
+        run: |
           echo deploy
       - name: upload
         if: ${{ inputs.Env == 'UAT' }}
@@ -34,8 +33,8 @@ jobs:
           password: ${{ secrets.UAT_MYSQL_PASSWORD }}
           remotDir: ${{ secrets.UAT_MYSQL_URL }}
           stepName: 'build'
-      - name：test
-        runs: |
+      - name: test
+        run: |
           echo deploy
       - name: upload
         uses: xudongk/testMybatis/.github/actions/ftp@main
@@ -46,7 +45,7 @@ jobs:
           password: ${{ secrets.UAT_MYSQL_PASSWORD }}
           remotDir: ${{ secrets.UAT_MYSQL_URL }}
           stepName: 'test'
-  scan-code：
+  scan-code:
     runs-on: ubuntu-latest
     steps:
       - name: download
@@ -58,10 +57,10 @@ jobs:
           password: ${{ secrets.UAT_MYSQL_PASSWORD }}
           remotDir: ${{ secrets.UAT_MYSQL_URL }}
           stepName: 'test'
-      - name：
-        runs：|
-          ls
-  clean：
+      - name: scan
+        run: |
+          echo deploy
+  clean:
     runs-on: ubuntu-latest
     steps:
       - name: delete
