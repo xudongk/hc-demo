@@ -16,9 +16,9 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'UPLOAD'
-          server: ${{ inputs.DeployOrFallback }}
-          user: ${{ secrets.UAT_MYSQL_DRIVER }}
-          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          server: ${{ secrets.ACT_URL }}
+          user: ${{ secrets.ACT_USER }}
+          password: ${{ secrets.ACT_PASSWORD }}
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'build'
   test:
@@ -28,21 +28,23 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'DOWNLOAD'
-          server: ${{ inputs.DeployOrFallback }}
-          user: ${{ secrets.UAT_MYSQL_DRIVER }}
-          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          server: ${{ secrets.ACT_URL }}
+          user: ${{ secrets.ACT_USER }}
+          password: ${{ secrets.ACT_PASSWORD }}
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'build'
       - name: test
         run: |
-          echo deploy
+          mkdir a
+          echo test workspace
+          ls
       - name: upload
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'DOWNLOAD'
-          server: ${{ inputs.DeployOrFallback }}
-          user: ${{ secrets.UAT_MYSQL_DRIVER }}
-          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          server: ${{ secrets.ACT_URL }}
+          user: ${{ secrets.ACT_USER }}
+          password: ${{ secrets.ACT_PASSWORD }}
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'test'
   scan-code:
@@ -52,14 +54,15 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'DOWNLOAD'
-          server: ${{ inputs.DeployOrFallback }}
-          user: ${{ secrets.UAT_MYSQL_DRIVER }}
-          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          server: ${{ secrets.ACT_URL }}
+          user: ${{ secrets.ACT_USER }}
+          password: ${{ secrets.ACT_PASSWORD }}
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'test'
       - name: scan
         run: |
-          echo deploy
+          echo scan-code workspace
+          ls
   clean:
     runs-on: ubuntu-latest
     steps:
@@ -67,9 +70,9 @@ jobs:
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
           type: 'DELETE'
-          server: ${{ inputs.DeployOrFallback }}
-          user: ${{ secrets.UAT_MYSQL_DRIVER }}
-          password: ${{ secrets.UAT_MYSQL_PASSWORD }}
+          server: ${{ secrets.ACT_URL }}
+          user: ${{ secrets.ACT_USER }}
+          password: ${{ secrets.ACT_PASSWORD }}
           remotDir: xudongk_hc-demo_test_file_share
           stepName: 'delete'
         
