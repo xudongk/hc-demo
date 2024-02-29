@@ -24,10 +24,6 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: show files
-        run: |
-          cd file
-          ls
       - name: download
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
@@ -56,10 +52,6 @@ jobs:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
-      - name: show files
-        run: |
-          cd file
-          ls
       - name: download
         uses: xudongk/testMybatis/.github/actions/ftp@main
         with:
