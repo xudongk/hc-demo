@@ -12,8 +12,11 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
-      - name: install cli
-        uses: redhat-actions/oc-installer@v1
+      - name: Authenticate and set context
+        uses: redhat-actions/oc-login@v1
+        with:
+          openshift_server_url: https://api.sandbox-m2.ll9k.p1.openshiftapps.com:6443
+          openshift_token: sha256~EqDtY6rESE33Ur0xj8V3yPjE7UCrOZQ2glPbXekE36g
       - name: login
         run: |
           oc login --token=sha256~EqDtY6rESE33Ur0xj8V3yPjE7UCrOZQ2glPbXekE36g --server=https://api.sandbox-m2.ll9k.p1.openshiftapps.com:6443
