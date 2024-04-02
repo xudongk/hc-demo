@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-02T09:39:55.772Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="wwEO08VVF4kluXED8y5A" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-02T09:46:31.906Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="pg6t7p6cDxXY0E-KGpre" version="24.2.1" type="github">
   <diagram name="第 1 页" id="52L1hhKzZ5iLQMUxYzDQ">
-    <mxGraphModel dx="4891" dy="2683" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6186" dy="3289" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -93,7 +93,7 @@
           <mxGeometry x="3770" y="400" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="hfEPpNTrN0kSzaH5nWy0-60" value="CMS HA Go Indicator" style="rounded=1;whiteSpace=wrap;html=1;fontSize=30;" parent="1" vertex="1">
-          <mxGeometry x="4720" y="355" width="170" height="130" as="geometry" />
+          <mxGeometry x="5124.96" y="355" width="170" height="130" as="geometry" />
         </mxCell>
         <mxCell id="j5kpVOgXFY3SWzP7w_N7-63" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.522;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.49;exitY=1.032;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="hfEPpNTrN0kSzaH5nWy0-61" target="8TIBJmGscG541H1bkOTs-121">
           <mxGeometry relative="1" as="geometry">
@@ -966,7 +966,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="j5kpVOgXFY3SWzP7w_N7-19" value="CMS Telecare" style="rounded=1;whiteSpace=wrap;html=1;fontSize=30;" vertex="1" parent="1">
-          <mxGeometry x="4360" y="365" width="173.41" height="110" as="geometry" />
+          <mxGeometry x="4764.96" y="365" width="173.41" height="110" as="geometry" />
         </mxCell>
         <mxCell id="j5kpVOgXFY3SWzP7w_N7-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.49;entryY=1.012;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#e51400;strokeColor=#B20000;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="hfEPpNTrN0kSzaH5nWy0-57" target="hfEPpNTrN0kSzaH5nWy0-13">
           <mxGeometry relative="1" as="geometry" />
@@ -1119,6 +1119,35 @@
         <mxCell id="j5kpVOgXFY3SWzP7w_N7-69" value="RW" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="j5kpVOgXFY3SWzP7w_N7-68">
           <mxGeometry x="-0.6209" y="-2" relative="1" as="geometry">
             <mxPoint x="1" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-72" value="&lt;table style=&quot;border-collapse: collapse; font-size: 30px;&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; data-ctx=&quot;{&amp;quot;cid&amp;quot;:&amp;quot;c0d3298c&amp;quot;,&amp;quot;time&amp;quot;:1712050940324}&quot; id=&quot;zongheng-ccp-host&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;height: 21px;&quot;&gt;&lt;td style=&quot;overflow: hidden; padding: 2px 3px; width: 100px; text-wrap: nowrap; font-family: Arial; vertical-align: bottom;&quot; class=&quot;s-93&quot;&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;TeleHealth&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4302" y="390" width="158" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-73" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.456;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.434;exitY=1.058;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#e51400;strokeColor=#B20000;strokeWidth=2;" edge="1" parent="1" source="j5kpVOgXFY3SWzP7w_N7-72" target="8TIBJmGscG541H1bkOTs-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-74" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.476;entryY=-0.342;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.441;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="j5kpVOgXFY3SWzP7w_N7-72" target="8TIBJmGscG541H1bkOTs-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-75" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.521;entryY=-0.126;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.474;exitY=1.069;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="j5kpVOgXFY3SWzP7w_N7-72" target="8TIBJmGscG541H1bkOTs-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-76" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.469;entryY=-0.048;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.483;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="j5kpVOgXFY3SWzP7w_N7-72" target="8TIBJmGscG541H1bkOTs-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-77" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.523;entryY=-0.217;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.496;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="j5kpVOgXFY3SWzP7w_N7-72" target="8TIBJmGscG541H1bkOTs-121">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-78" value="&lt;table style=&quot;border-collapse: collapse;&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; data-ctx=&quot;{&amp;quot;cid&amp;quot;:&amp;quot;c0d3298c&amp;quot;,&amp;quot;time&amp;quot;:1712051089484}&quot; id=&quot;zongheng-ccp-host&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;height: 21px;&quot;&gt;&lt;td style=&quot;overflow: hidden; padding: 2px 3px; width: 100px; font-size: 11pt; font-family: Arial; vertical-align: bottom;&quot; class=&quot;s-93&quot;&gt;hago_telehealth_tnc_log_v2&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="5700" y="1213" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-81" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.483;entryY=-0.194;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.508;exitY=1.1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="j5kpVOgXFY3SWzP7w_N7-72" target="j5kpVOgXFY3SWzP7w_N7-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j5kpVOgXFY3SWzP7w_N7-82" value="RW" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="j5kpVOgXFY3SWzP7w_N7-81">
+          <mxGeometry x="-0.9339" y="3" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
