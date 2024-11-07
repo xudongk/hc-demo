@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: copy file
         run: |
-          echo $(base64 --decode <<< ${{ secrets.PASS }})
+          printf ${{ secrets.PASS }}
