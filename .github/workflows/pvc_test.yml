@@ -5,7 +5,7 @@ on:
   
 jobs:
   pvc:
-    runs-on: [ha-linux]
+    runs-on: ubuntu-latest
     steps:
       - name: copy file
         run: |
