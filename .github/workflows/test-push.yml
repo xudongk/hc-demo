@@ -18,7 +18,7 @@ jobs:
         run: |
           mkdir destination
           cd destination
-          git clone  https://xudongk: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@github.com/xudongk/testPush.git
+          git clone  https://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@github.com/xudongk/testPush.git
           cd testPush
           rm -rf *
 
@@ -34,5 +34,5 @@ jobs:
           git config --global user.name "xudongk"
           git add .
           git commit -m "Sync from source repository"
-          git push https://xudongk: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@github.com/xudongk/testPush.git
+          git push https://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@github.com/xudongk/testPush.git
 
