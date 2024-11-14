@@ -34,5 +34,7 @@ jobs:
         run: |
           cd destination/testPush
           git add .
+          git config user.email "xudongkej@163.com"
+          git config user.name "xudongk"
           git commit -m "Sync from source repository"
           git push
