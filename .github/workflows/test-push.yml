@@ -26,6 +26,7 @@ jobs:
       - name: Copy files from source to destination
         run: |
           pwd
+          ls
           cp -r source/* destination/
           cd destination
           ls
