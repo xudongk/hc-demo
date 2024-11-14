@@ -1,10 +1,8 @@
-name: Sync Repositories
-
+name: push code
 on:
   push:
     branches:
       - main
-
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -13,7 +11,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: source
-
       - name: Set up Git for destination repository
         run: |
           mkdir destination
@@ -30,9 +27,10 @@ jobs:
       - name: Commit and push changes to destination repository
         run: |
           cd destination/testPush
+          git config --global http.sslVerify "false"
           git config --global user.email "xudongkej@163.com"
           git config --global user.name "xudongk"
           git add .
           git commit -m "Sync from source repository"
-          git push https://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@github.com/xudongk/testPush.git
+          git push https://x-access-token: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@github.com/xudongk/testPush.git
 
