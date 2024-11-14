@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
+        with:
+          path: source
 
       - name: Set up Git for destination repository
         run: |
@@ -26,7 +28,7 @@ jobs:
       - name: Copy files from source to destination
         run: |
           pwd
-          /bin/bash -c "find. -maxdepth 1! -name destination -type f -exec cp {} destination/ \;"
+          cp source/* destination/
           cd destination
           ls
           pwd
