@@ -26,7 +26,7 @@ jobs:
       - name: Copy files from source to destination
         run: |
           pwd
-          find. -maxdepth 1! -name destination -type f -exec cp {} destination/ \;
+          /bin/bash -c "find. -maxdepth 1! -name destination -type f -exec cp {} destination/ \;"
           cd destination
           ls
           pwd
