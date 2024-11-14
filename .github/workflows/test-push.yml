@@ -29,14 +29,14 @@ jobs:
       - name: Copy files from source to destination
         run: |
           pwd
-          cp source/* destination/
+          cp -r source/* destination/
           cd destination
           ls
           pwd
 #          cp -r../<source-repo-directory>/*./ # 将源仓库内容复制到目标仓库检出的目录中
 #
-#      - name: Commit and push changes to destination repository
-#        run: |
-#          git add.
-#          git commit -m "Sync from source repository"
-#          git push
+     - name: Commit and push changes to destination repository
+       run: |
+         git add.
+         git commit -m "Sync from source repository"
+         git push
