@@ -25,7 +25,7 @@ jobs:
           rm -rf *
       - name: Copy files from source to destination
         run: |
-          cp -r ./!(destination) destination/
+          cp -r ./!destination destination/
           cd destination
           ls
           pwd
