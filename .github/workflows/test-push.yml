@@ -18,23 +18,18 @@ jobs:
         run: |
           mkdir destination
           cd destination
-          git init
-          git config user.email "xudongkej@163.com"
-          git config user.name "xudongk"
+          git clone https://xudongk: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@github.com/xudongk/testPush.git
+          cd testPush
+          rm -rf *
 
       - name: Copy files from source to destination
         run: |
           pwd
           ls
-          cp -r source/* destination/
-          cd destination
-          ls
-          pwd
+          cp -r source/* destination/testPush/
       - name: Commit and push changes to destination repository
         run: |
-          cd destination
+          cd destination/testPush
           git add .
           git commit -m "Sync from source repository"
-          git remote add origin https://github.com/xudongk/testPush.git
-          git remote set-url origin https://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@github.com/xudongk/testPush.git
-          git push --force -u origin main
+          git push
