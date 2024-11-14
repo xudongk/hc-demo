@@ -19,7 +19,8 @@ jobs:
           mkdir destination
           cd destination
           git init
-          git remote set-url testpush https://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@github.com/xudongk/testPush.git
+          git config --global init.defaultBranch main
+          git remote set-url testPush https://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@github.com/xudongk/testPush.git
           git pull testPush main
       - name: Checkout destination repository
         run: |
