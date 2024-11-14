@@ -37,4 +37,4 @@ jobs:
           git config user.email "xudongkej@163.com"
           git config user.name "xudongk"
           git commit -m "Sync from source repository"
-          git push
+          git push https://xudongk:y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@github.com/xudongk/testPush.git
