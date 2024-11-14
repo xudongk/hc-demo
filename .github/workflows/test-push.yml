@@ -27,7 +27,7 @@ jobs:
       - name: Commit and push changes to destination repository
         run: |
           cd destination/testPush
-          git config --global http.sslVerify "false"
+          git config --global https.sslVerify "false"
           git config --global user.email "xudongkej@163.com"
           git config --global user.name "xudongk"
           git add .
