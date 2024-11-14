@@ -18,14 +18,7 @@ jobs:
         run: |
           mkdir destination
           cd destination
-          git remote -v
-          git config --global init.defaultBranch main
-          git init
-          git remote set-url testPush https://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@github.com/xudongk/testPush.git
-          git pull testPush main
-      - name: Checkout destination repository
-        run: |
-          git clone https://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@github.com/xudongk/testPush.git destination
+          git clone https://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@github.com/xudongk/testPush.git
           cd destination
           rm -rf *
       - name: Copy files from source to destination
