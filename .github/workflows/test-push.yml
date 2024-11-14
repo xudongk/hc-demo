@@ -25,7 +25,8 @@ jobs:
           rm -rf *
       - name: Copy files from source to destination
         run: |
-          cp -r ./!destination destination/
+          pwd
+          find. -maxdepth 1! -name destination -type f -exec cp {} destination/ \;
           cd destination
           ls
           pwd
