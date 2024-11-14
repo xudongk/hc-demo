@@ -15,6 +15,9 @@ jobs:
         run: |
           mkdir destination
           cd destination
+          git config --global https.sslVerify "false"
+          git config --global user.email "xudongkej@163.com"
+          git config --global user.name "xudongk"
           git clone  https://x-access-token:${{secrets.GIT_TOKEN}}@github.com/xudongk/testPush.git
           cd testPush
           rm -rf *
