@@ -30,6 +30,9 @@ jobs:
       - name: Commit and push changes to destination repository
         run: |
           cd destination/testPush
+          git config --global user.email "xudongkej@163.com"
+          git config --global user.name "xudongk"
           git add .
           git commit -m "Sync from source repository"
           git push
+
