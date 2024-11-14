@@ -16,11 +16,11 @@ jobs:
 
       - name: Set up Git for destination repository
         run: |
+          mkdir destination
+          cd destination
           git init
-          git config --global user.email "xudongkej@163.com"
-          git config --global user.name "xudongk"
-          git remote set-url origin https://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@github.com/xudongk/testPush.git
-
+          git remote set-url testpush https://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@github.com/xudongk/testPush.git
+          git pull testPush main
       - name: Checkout destination repository
         run: |
           git clone https://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@github.com/xudongk/testPush.git destination
