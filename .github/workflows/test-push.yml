@@ -35,6 +35,7 @@ jobs:
           pwd
       - name: Commit and push changes to destination repository
         run: |
+          cd destination
           git add.
           git commit -m "Sync from source repository"
           git push
