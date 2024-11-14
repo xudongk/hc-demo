@@ -18,10 +18,10 @@ jobs:
         run: |
           mkdir destination
           cd destination
-          git clone https://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@github.com/xudongk/testPush.git
-          ls
-          cd testPush
-          rm -rf *
+          git init
+          git config user.email "xudongkej@163.com"
+          git config user.name "xudongk"
+
       - name: Copy files from source to destination
         run: |
           pwd
@@ -32,10 +32,9 @@ jobs:
           pwd
       - name: Commit and push changes to destination repository
         run: |
-          cd destination/testPush
+          cd destination
           git add .
-          git config user.email "xudongkej@163.com"
-          git config user.name "xudongk"
           git commit -m "Sync from source repository"
-          export GITHUB_TOKEN=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
-          git push https://xudongk@github.com/xudongk/testPush.git
+          git remote add origin https://github.com/xudongk/testPush.git
+          git remote set-url origin https://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@github.com/xudongk/testPush.git
+          git push -u origin main
