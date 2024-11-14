@@ -16,9 +16,13 @@ jobs:
 
       - name: Set up Git for destination repository
         run: |
+          cd source
+          ls
           mkdir destination
           cd destination
           git clone https://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@github.com/xudongk/testPush.git
+          cd testPush
+          rm -rf *
       - name: Copy files from source to destination
         run: |
           pwd
@@ -28,7 +32,7 @@ jobs:
           pwd
       - name: Commit and push changes to destination repository
         run: |
-          cd destination
+          cd destination/testPush
           git add
           git commit -m "Sync from source repository"
           git push
