@@ -25,6 +25,8 @@ jobs:
           rm -rf *
       - name: Copy files from source to destination
         run: |
+          cp -r ./!(destination) destination/
+          cd destination
           ls
           pwd
 #          cp -r../<source-repo-directory>/*./ # 将源仓库内容复制到目标仓库检出的目录中
