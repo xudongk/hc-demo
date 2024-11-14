@@ -15,7 +15,7 @@ jobs:
         run: |
           mkdir destination
           cd destination
-          git clone  https://x-access-token:${{secerts.GIT_TOKEN}}@github.com/xudongk/testPush.git
+          git clone  https://x-access-token:${{secrets.GIT_TOKEN}}@github.com/xudongk/testPush.git
           cd testPush
           rm -rf *
 
