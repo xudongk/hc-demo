@@ -33,6 +33,6 @@ jobs:
       - name: Commit and push changes to destination repository
         run: |
           cd destination/testPush
-          git add
+          git add .
           git commit -m "Sync from source repository"
           git push
