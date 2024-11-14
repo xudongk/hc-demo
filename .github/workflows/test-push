@@ -1,0 +1,36 @@
+name: Sync Repositories
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Git for destination repository
+        run: |
+          git config --global user.email "xudongkej@163.com"
+          git config --global user.name "xudongk"
+          git remote set-url origin https://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@github.com/xudongk/testPush.git
+
+      - name: Checkout destination repository
+        run: |
+          git clone https://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@github.com/xudongk/testPush.git destination
+          cd destination
+          rm -rf *
+      - name: Copy files from source to destination
+        run: |
+          ls
+          pwd
+#          cp -r../<source-repo-directory>/*./ # 将源仓库内容复制到目标仓库检出的目录中
+#
+#      - name: Commit and push changes to destination repository
+#        run: |
+#          git add.
+#          git commit -m "Sync from source repository"
+#          git push
